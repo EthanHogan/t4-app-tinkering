@@ -155,6 +155,13 @@ To scaffold an app using `create-t4-app`, run any of the following commands.
 ```bash
 yarn create t4-app
 ```
+After cloning, dependency installation, and genration of the Drizzle client is complete by `create-t4-app`...
+
+🚧 Remember to set up your environment variables properly by:
+1. Duplicating the `.env.local.example` file, removing ".example", and entering your variables
+2. Duplicating `/packages/api/.dev.vars.example`, removing ".example", and entering your Clerk `JWT_VERIFICATION_KEY`
+3. Configure Cloudflare Wrangler configs inside `/apps/next/wrangler.toml` and `/packages/api/wrangler.toml` to match your deployment environment.
+🚀 Successfully created t4 project! After having filled out your `.env.local`, run 'cd packages/api && yarn migrate:local' to create your database tables. Run 'yarn api' and 'yarn web' in separate terminal tabs to start the api and web development servers.
 
 👉 Further documentation can be found on the [T4 Stack website](https://t4stack.com). 👈
 
